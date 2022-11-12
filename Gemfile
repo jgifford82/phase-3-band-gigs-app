@@ -50,3 +50,7 @@ group :test do
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
 end
+
+# Install faker gem to autopopulate seeds
+# https://github.com/faker-ruby/faker
+gem "faker"
