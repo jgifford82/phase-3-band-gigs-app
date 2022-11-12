@@ -1,4 +1,6 @@
-puts "🌱 Seeding spices..."
+require 'faker'
+
+puts "🌱 Seeding data..."
 
 # Seed your database here
 
