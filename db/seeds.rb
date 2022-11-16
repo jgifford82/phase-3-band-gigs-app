@@ -16,8 +16,9 @@ Event.destroy_all
     )
 
     #For each city, create 5 events
-    5.times.do
-    item = Item.create(
+    5.times do
+    # event = Event.create
+    city.events.create(
         band: Faker::Music.band,
         venue: Faker::University.name,
         # Random date in the future (up to maximum of N days)
@@ -25,12 +26,13 @@ Event.destroy_all
         date: Faker::Date.forward(days: 60),
         # Random Time in the future 
         # Keyword arguments: period, format
-        time: Faker::Time.forward(period: :evening, format: :long)
-        price: Faker::Commerce.price
+        time: Faker::Time.forward(period: :evening, format: :long),
+        price: Faker::Commerce.price,
         # Don't need to randomly assign foreign keys like City.ids.sample since each instance has a variable name (lines 14, 20)
-        city_id: city.id
+        # city_id: city.id
         # city_id: City.ids.sample
     )
     end
+end
 
 puts "✅ Done seeding!"
