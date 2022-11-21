@@ -4,6 +4,7 @@ class CitiesController < ApplicationController
       City.all.to_json(include: :events)
     end
 
+    # Add a new city
     post "/cities" do 
         City.create(
             name: params[:name]
