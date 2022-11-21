@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
-    # get "/events" do
-    # #   Event.all.to_json
-    # "Hello World"
-    # end
+    # Show all events
+    get "/events" do
+      Event.all.to_json
+    end
+
 end
