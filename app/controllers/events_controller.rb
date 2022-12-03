@@ -2,6 +2,7 @@ class EventsController < ApplicationController
     # Show all events
     get "/events" do
       Event.all.to_json
+    #   this is where i'd call a method from the model to display 5 most recent events
     end
 
     # Add a new event
