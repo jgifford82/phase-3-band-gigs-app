@@ -3,6 +3,11 @@ class CitiesController < ApplicationController
     get "/cities" do
       City.all.to_json(include: :events)
     end
+    
+    # Show specific city's events
+    get "/cities/:id" do
+        City.find_by_id(params["id"]).to_json(include: :events)
+    end
 
     # Add a new city
     post "/cities" do 
