@@ -4,10 +4,11 @@ class CitiesController < ApplicationController
       City.all.to_json(include: :events)
     end
     
-    # Show specific city's events
-    get "/cities/:id" do
-        City.find_by_id(params["id"]).to_json(include: :events)
-    end
+    # Don't need this; redundant after the get above
+    # # Show specific city's events
+    # get "/cities/:id" do
+    #     City.find_by_id(params["id"]).to_json(include: :events)
+    # end
 
     # Add a new city
     post "/cities" do 
