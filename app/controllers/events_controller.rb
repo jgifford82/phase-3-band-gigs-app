@@ -22,9 +22,7 @@ class EventsController < ApplicationController
         Event.find(params[:id]).update(
             venue: params[:venue],
             date: params[:date],
-            time: params[:time],
-            price: params[:price],
-            city_id: params[:city_id]
+            time: params[:time]
         ).to_json
     end
 
