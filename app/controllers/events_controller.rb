@@ -1,8 +1,10 @@
 class EventsController < ApplicationController
     # Show all events
     get "/events" do
-      Event.all.to_json
-    #   this is where i'd call a method from the model to display 5 most recent events
+    #   Event.all.to_json
+    #   Display 10 most recently created events in descending order
+        events = Event.order(created_at: :desc).limit(10)
+        events.to_json
     end
 
     # Add a new event
