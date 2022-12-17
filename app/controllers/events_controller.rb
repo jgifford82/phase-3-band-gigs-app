@@ -19,11 +19,13 @@ class EventsController < ApplicationController
 
     # Update a specific event's details
     patch "/events/:id" do 
-        Event.find(params[:id]).update(
+        event=Event.find(params[:id])
+        event.update(
             venue: params[:venue],
             date: params[:date],
             time: params[:time]
-        ).to_json
+        )
+        event.to_json
     end
 
     # Delete a specific event
