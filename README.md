@@ -50,3 +50,7 @@ bundle exec rake server
 ```
 
 In a browser window, go to http://localhost:9292/cities or http://localhost:9292/events.
+
+## Frontend repo:
+
+https://github.com/jgifford82/phase-3-band-gigs-app-frontend
